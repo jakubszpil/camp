@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" :class="`title is-${asVariant || variant}`" v-bind="$attrs">
+  <component :is="tagname" :class="`title is-${asVariant || variant}`" v-bind="$attrs">
     <slot />
   </component>
 </template>
@@ -9,18 +9,23 @@ export default {
   props: {
     variant: {
       type: String,
-      default: "1",
+      default: "1"
     },
     asVariant: {
       type: String,
-      default: null,
+      default: null
     },
+    tag: {
+      type: String,
+      default: null
+    }
   },
   computed: {
-    tag: function () {
-      return `h${this.variant}`;
-    },
-  },
+    tagname: function() {
+      if (this.tag) return this.tag;
+      else return `h${this.variant}`;
+    }
+  }
 };
 </script>
 

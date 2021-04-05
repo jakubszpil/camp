@@ -10,6 +10,7 @@ export default {};
 
 <style>
 .base-text {
+  margin: 0 auto;
   max-width: 60ch;
 }
 </style>

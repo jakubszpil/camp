@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <the-navbar class="layout__navbar" />
-    <nuxt class="mt-4 layout__content" />
+    <nuxt class="layout__content" />
     <the-footer class="layout__footer" />
   </div>
 </template>

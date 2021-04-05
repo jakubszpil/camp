@@ -1,5 +1,5 @@
 <template>
-  <form @submit="handleSubmit" @reset="handleReset" class="container is-max-desktop">
+  <form @submit.prevent="handleSubmit" @reset="handleReset" class="container is-max-desktop">
     <div class="columns">
       <div class="column">
         <b-field label="Imię i nazwisko" label-position="on-border">
@@ -34,7 +34,8 @@ export default {
   data() {
     return {
       loading: false,
-      succesful: null,
+      successful: null,
+      error: null,
       body: {
         name: "",
         email: "",
@@ -44,20 +45,46 @@ export default {
   },
 
   methods: {
-    handleSubmit(evt) {
-      evt.preventDefault();
+    async handleSubmit() {
       this.loading = true;
+      this.successful = null;
+      this.error = null;
 
-      setTimeout(() => {
+      try {
+        // const response = await this.$axios.post("/api/contact", this.body);
+
+        // if (response.statusText !== "OK") throw new Error();
+
+        this.successful = true;
         this.loading = false;
-      }, 1000);
+
+        this.$toast({
+          message: "Wiadomość została wysłana pomyślnie! :)",
+          type: "is-success",
+        });
+
+        this.reset();
+      } catch (e) {
+        this.error = true;
+        this.loading = false;
+
+        this.$toast({
+          message: "Ups! Wystąpił błąd z wysyłaniem wiadomości :( Spróbuj ponownie",
+          type: "is-danger",
+        });
+      }
     },
-    handleReset() {
+    reset() {
       this.body = {
         name: "",
         email: "",
         message: "",
       };
+    },
+    handleReset() {
+      this.successful = null;
+      this.error = null;
+      this.reset();
     },
   },
 };

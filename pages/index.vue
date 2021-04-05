@@ -84,15 +84,15 @@
 
       <div class="container is-max-desktop my-6 has-text-left">
         <div class="columns">
-          <div class="column" v-for="item in [1, 2]" :key="item">
-            <div class="column"></div>
-            <div class="column">
+          <div class="column columns is-mobile" v-for="item in [1, 2]" :key="item">
+            <div class="column is-one-quarter"><b-icon icon="account-multiple" size="is-large" /></div>
+            <div class="column is-three-quarters">
               <base-heading variant="4" asVariant="4">Lorem, ipsum dolor.</base-heading>
             </div>
           </div>
         </div>
         <div class="columns">
-          <div class="column" v-for="item in [3, 4]" :key="item">
+          <div class="column columns" v-for="item in [3, 4]" :key="item">
             <div class="column"></div>
             <div class="column">
               <base-heading variant="4" asVariant="4">Lorem, ipsum dolor.</base-heading>
@@ -106,7 +106,7 @@
     <base-section heading="Opinie"></base-section>
     <base-section heading="Harmonogram kolonii" class="has-background-grey-lighter" headingClass="has-text-primary">
       <div class="table-container">
-        <table class="table is-striped has-text-centered is-bordered is-fullwidth">
+        <table class="table has-text-centered is-bordered is-striped is-fullwidth">
           <thead>
             <tr>
               <th>Godzina</th>
@@ -147,7 +147,7 @@
       </div>
     </base-section>
     <base-section heading="Kontakt">
-      <the-contact />
+      <the-contact-form />
     </base-section>
   </main>
 </template>
@@ -165,10 +165,10 @@ export default {
         "16:30 - 16:45",
         "16:45 - 19:00",
         "19:00 - 19:30",
-        "19:30 - 22:00",
-      ],
+        "19:30 - 22:00"
+      ]
     };
-  },
+  }
 };
 </script>
 

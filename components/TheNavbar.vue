@@ -1,7 +1,7 @@
 <template>
   <b-navbar wrapper-class="container is-max-fullhd" fixed-top shadow centered spaced close-on-click>
     <template #brand>
-      <b-navbar-item tag="nuxt-link" to="/">
+      <b-navbar-item @click.native="scrollTo" tag="nuxt-link" to="/">
         <base-heading variant="1" asVariant="5">esportscamp</base-heading>
       </b-navbar-item>
     </template>
@@ -56,6 +56,11 @@ export default {
         }
       },
       immediate: false
+    }
+  },
+  methods: {
+    scrollTo: function() {
+      if (!this.$route.hash) window.scrollTo(0, 0);
     }
   }
 };
