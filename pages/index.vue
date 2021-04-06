@@ -65,15 +65,22 @@
     >
     <base-section heading="Kiedy?" class="has-background-info has-text-centered" text="white">
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem perferendis reiciendis quia harum officiis a, possimus, ratione quod
-        rerum consequuntur vitae eum eius accusantium exercitationem in aut, delectus deleniti? Veritatis repellendus voluptatem ex voluptates
-        omnis sit vel aliquam ipsa possimus?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aut doloribus aperiam rem voluptatum id dolore minima recusandae
+        delectus vel consequuntur officia velit quas quibusdam hic cumque in eius aliquam, at autem corporis natus qui. Atque corrupti magni quo
+        sunt in laborum minima, minus doloremque expedita et, alias sapiente! Quibusdam labore rerum, numquam laboriosam enim, tempore, magnam
+        libero vitae porro eaque animi asperiores veritatis sunt tempora modi similique maiores. Ullam animi, placeat veritatis totam omnis
+        tempora delectus? Labore, minus voluptate! Veritatis natus ea cupiditate laborum, voluptate odit consequatur fuga obcaecati voluptatibus
+        architecto sed, impedit dolor nam magni! Facere, nam animi.
       </p>
+      <b-button tag="nuxt-link" to="/zapisy" type="is-white" class="has-text-primary has-text-weight-bold mt-6 is-medium"
+        >Zapisz się już teraz!</b-button
+      >
     </base-section>
     <base-section heading="Czego nauczamy?" class="has-text-centered" headingClass="has-text-info">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur voluptatem doloribus aspernatur quis corrupti quam neque ratione fugiat
-        ab commodi.
+      <p class="has-text-weight-bold">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione consequuntur aliquam voluptate perferendis. Dicta modi cupiditate
+        commodi, quis reiciendis, nemo cumque aspernatur totam eveniet est accusamus corporis illum odit pariatur harum ex blanditiis voluptates
+        aliquam qui inventore ut iste! Saepe!
       </p>
 
       <div class="container is-max-desktop my-6">
@@ -95,7 +102,9 @@
     </base-section>
     <base-section heading="Nasza kadra" class="has-background-grey-lighter" headingClass="has-text-primary"></base-section>
     <base-section heading="Ile kosztuje?"></base-section>
-    <base-section heading="Opinie"></base-section>
+    <base-section heading="Opinie">
+      <opinions />
+    </base-section>
     <base-section heading="Harmonogram kolonii" class="has-background-grey-lighter" headingClass="has-text-primary">
       <div class="table-container">
         <table class="table has-text-centered is-bordered is-striped is-fullwidth">

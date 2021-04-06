@@ -2,10 +2,10 @@
   <main>
     <base-section heading="Szkolenia indywidualne" class="has-text-centered">
       <base-heading variant="4" class="has-text-primary">Zapraszamy do udziału w szkoleniach indywidualnych on-line z</base-heading>
-      <base-text class="columns is-mobile mb-6">
-        <span class="column">gra</span>
-        <span class="column">gra</span>
-      </base-text>
+      <div class="columns is-mobile games">
+        <base-text class="column">game</base-text>
+        <base-text class="column">game</base-text>
+      </div>
       <div class="columns pt-3 pb-6 container is-max-desktop grid-container">
         <div class="column columns is-mobile" v-for="parentItem in [2, 4]" :key="parentItem">
           <div class="column" v-for="item in [2, 3]" :key="item">
@@ -47,7 +47,12 @@ export default {
 
 <style>
 .icon-size {
-  font-size: 6rem;
+  font-size: 6rem !important;
+}
+
+.games {
+  max-width: 60ch;
+  margin: 0 auto;
 }
 
 .grid-container {

@@ -66,7 +66,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .has-smooth-scrolling {
   scroll-behavior: smooth !important;
 }
