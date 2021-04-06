@@ -85,15 +85,9 @@
 
       <div class="container is-max-desktop my-6">
         <div class="columns px-0 mx-0">
-          <div class="column columns is-mobile">
-            <div class="column" v-for="item in [1, 2]" :key="item">
-              <b-icon custom-size="icon-size" icon="account-supervisor" size="is-large" />
-              <base-heading variant="4" asVariant="4">Lorem, ipsum dolor.</base-heading>
-            </div>
-          </div>
-          <div class="column columns is-mobile">
-            <div class="column" v-for="item in [1, 2]" :key="item">
-              <b-icon custom-size="icon-size" icon="account-supervisor" size="is-large" />
+          <div class="column columns is-mobile" v-for="parentItem in [2, 4]" :key="parentItem">
+            <div class="column" v-for="item in [2, 3]" :key="item">
+              <b-icon custom-size="icon-size is-size-1-mobile" icon="account-supervisor" size="is-large" />
               <base-heading variant="4" asVariant="4">Lorem, ipsum dolor.</base-heading>
             </div>
           </div>

@@ -11,7 +11,7 @@
           <div class="column" v-for="item in [2, 3]" :key="item">
             <b-icon
               class="is-inline"
-              custom-size="icon-size"
+              custom-size="icon-size is-size-1-mobile"
               :type="colors[(Number(parentItem) + Number(item)) % 4]"
               :icon="icons[(Number(parentItem) + Number(item)) % 4]"
             ></b-icon>
@@ -46,10 +46,6 @@ export default {
 </script>
 
 <style>
-.icon-size {
-  font-size: 6rem !important;
-}
-
 .games {
   max-width: 60ch;
   margin: 0 auto;

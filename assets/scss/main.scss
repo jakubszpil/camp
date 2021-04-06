@@ -3,3 +3,7 @@ $primary: rgb(147, 50, 142);
 $link: $primary;
 
 @import "bulma";
+
+.icon-size {
+  font-size: 6rem !important;
+}
