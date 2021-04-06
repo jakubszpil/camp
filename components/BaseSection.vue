@@ -1,7 +1,9 @@
 <template>
   <section class="section px-0 is-medium" :id="id">
     <base-container tag="header" v-if="heading">
-      <base-heading variant="2" asVariant="3" class="has-text-centered py-5" :class="[textColor, headingClass]">{{ heading }}</base-heading>
+      <base-heading variant="2" asVariant="3" class="has-text-centered py-5 mb-6" :class="[textColor, headingClass]">{{
+        heading
+      }}</base-heading>
     </base-container>
     <base-container :class="[textColor, wrapperClass]">
       <slot />

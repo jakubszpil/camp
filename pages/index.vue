@@ -39,17 +39,11 @@
         cum illum laudantium, voluptatibus ea modi perferendis suscipit error quam. Repudiandae, libero.
       </p>
       <div class="columns has-text-centered is-4 my-6">
-        <div class="column">
-          <p>image</p>
-          <base-heading variant="3" asVariant="4">Lorem, ipsum.</base-heading>
-        </div>
-        <div class="column">
-          <p>image</p>
-          <base-heading variant="3" asVariant="4">Lorem, ipsum.</base-heading>
-        </div>
-        <div class="column">
-          <p>image</p>
-          <base-heading variant="3" asVariant="4">Lorem, ipsum.</base-heading>
+        <div class="column py-6" v-for="item in [1, 2, 3]" :key="item">
+          <p>
+            <b-icon custom-size="icon-size" icon="account-supervisor" />
+          </p>
+          <base-heading variant="3" asVariant="4">Lorem ipsum dolor sit amet consectetur.</base-heading>
         </div>
       </div>
       <p>
@@ -82,19 +76,17 @@
         ab commodi.
       </p>
 
-      <div class="container is-max-desktop my-6 has-text-left">
-        <div class="columns">
-          <div class="column columns is-mobile" v-for="item in [1, 2]" :key="item">
-            <div class="column is-one-quarter"><b-icon icon="account-multiple" size="is-large" /></div>
-            <div class="column is-three-quarters">
+      <div class="container is-max-desktop my-6">
+        <div class="columns px-0 mx-0">
+          <div class="column columns is-mobile">
+            <div class="column" v-for="item in [1, 2]" :key="item">
+              <b-icon custom-size="icon-size" icon="account-supervisor" size="is-large" />
               <base-heading variant="4" asVariant="4">Lorem, ipsum dolor.</base-heading>
             </div>
           </div>
-        </div>
-        <div class="columns">
-          <div class="column columns" v-for="item in [3, 4]" :key="item">
-            <div class="column"></div>
-            <div class="column">
+          <div class="column columns is-mobile">
+            <div class="column" v-for="item in [1, 2]" :key="item">
+              <b-icon custom-size="icon-size" icon="account-supervisor" size="is-large" />
               <base-heading variant="4" asVariant="4">Lorem, ipsum dolor.</base-heading>
             </div>
           </div>
